@@ -11,32 +11,26 @@ public class JavaDraw {
 	System.out.println( "Write 2 for elephant  " );
 	System.out.println( "Write 3 for bear      " );
         System.out.println( "Write 4 for snake     " );
-
-        //Task 1 – Pick up the user's choice.
-
-        //Task 3 – Call the draw function, and pass in the user's choice.
-        scan.close();
+        
+    System.out.println();
+    
+    choice = scan.nextInt();
+    
+    while (!(choice >= 1 && choice <=4)) {  
+    if (choice >= 1 && choice <=4) {
+        break;
+    } else {
+        System.out.println("That is not an option, choose another");
+        choice = scan.nextInt();
+    }
+        draw(choice);
+    }
     }
 
-
-       //Task 2 – Write a function 
-
-    /**
-     * Function name: draw - draws an animal that the user chooses.
-     * @param choice: (int)
-     * 
-     * Inside the function: 
-     *  • Based on the choice, draw:
-     *      1. a butterfly
-     *      2. elephant
-     *      3. bear
-     *      4. snake
-     */  
-
-     /*
-     
-     Animal 1 
-
+     public static void draw(int choice) {
+         switch (choice) {
+             case 1 : 
+            System.out.println("Here's a butterfly\n");
             System.out.println("  .==-.                   .-==.     ");
             System.out.println("   \\()8`-._  `.   .'  _.-'8()/     ");
             System.out.println("   (88\"   ::.  \\./  .::   \"88)     ");
@@ -48,9 +42,10 @@ public class JavaDraw {
             System.out.println("     (O :8 ::/ \\_/ \\:: 8: O)      ");
             System.out.println("      \\O `::/       \\::' O/       ");
             System.out.println("       \"\"--'         `--\"\"      ");
-
-    Animal 2
-
+            break;
+            
+            case 2 : 
+            System.out.println("Here's an elephant\n");
             System.out.println("       _..--\"\"-.                  .-\"\"--.._ ");
             System.out.println("   _.-'         \\ __...----...__ /         '-._");
             System.out.println(" .'      .:::...,'              ',...:::.      '.");
@@ -68,13 +63,11 @@ public class JavaDraw {
             System.out.println("        / '.    `-.__)       |    `\"");
             System.out.println("       | =(`-.        '==.   ;");
             System.out.println("        \\  '. `-.           /");
-            System.out.println("         \\_:_)   `\"--.....-'");
-
-
-
-
-    Animal 3
-
+            System.out.println("         \\_:_)   `\"--.....-'"); 
+            break;
+            
+            case 3 : 
+            System.out.println("Here's a bear\n");
             System.out.println("            ___   .--. ");
             System.out.println("      .--.-\"   \"-' .- |");
             System.out.println("     / .-,`          .'");
@@ -95,12 +88,10 @@ public class JavaDraw {
             System.out.println("                  \\        /");
             System.out.println("                   '._  _.'");
             System.out.println("                      ``");
-
-
-
-
-    Animal 4
-
+            break; 
+            
+            case 4 : 
+            System.out.println("Here's a snake\n");
             System.out.println("         ,,'6''-,.");
             System.out.println("        <====,.;;--.");
             System.out.println("        _`---===. \"\"\"==__");
@@ -117,8 +108,8 @@ public class JavaDraw {
             System.out.println("           |=|  `----\"\"\"     `\"\"\"\"\"\"\"\"         _,-'");
             System.out.println("            `=\\     __,---\"\"\"-------------\"\"\"''");
             System.out.println("                \"\"\"\"		");
+         }
+     }
+    }
 
-     
-     */
-
-}
+    
